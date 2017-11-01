@@ -58,7 +58,7 @@ The `MarsHabitatPricer` class has a generated
 `prediction(solarPanels:greenhouses:size:)` method that’s used to predict a
 price from the model’s input values—in this case, the number of solar panels,
 the number of greenhouses, and the size of the habitat (in acres). The result of
-this method is a `MarsHabitatPricerOutput` instance, `marsHabitatPricerOutput`.
+this method is a `MarsHabitatPricerOutput` instance.
 
 ``` swift
 guard let marsHabitatPricerOutput = try? model.prediction(solarPanels: solarPanels, greenhouses: greenhouses, size: size) else {
@@ -74,7 +74,7 @@ let price = marsHabitatPricerOutput.price
 priceLabel.text = priceFormatter.string(for: price)
 ```
 
-- Note: The generated `prediction(solarPanels:greenhouses:size:)` method can throw an error. The most common type of errors you’ll encounter in working with Core ML occur when the type of input data you pass to the method doesn’t match the type of input the model is expecting—for example, an image in the wrong format. In this sample app, the inputs are of type `Double`. Any type mismatches are caught at compile time, and the sample app raises a fatal error if something goes wrong.
+- Note: The generated `prediction(solarPanels:greenhouses:size:)` method can throw an error. The most common type of error you’ll encounter when working with Core ML occur when the details of the input data don't match the details the model is expecting—for example, an image in the wrong format. 
 
 ## Building and Running a Core ML App 
 
