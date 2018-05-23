@@ -41,11 +41,11 @@ class ViewController: UIViewController , UIPickerViewDataSource {
             pickerView.delegate = self
             pickerView.dataSource = self
             
-            let features: [Feature] = [.solarPanels, .greenhouses, .size]
-            for feature in features {
-                pickerView.selectRow(2, inComponent: feature.rawValue, animated: false)
+      //      let features: [Feature] = [.solarPanels, .greenhouses, .size]
+      //      for feature in features {
+      //          pickerView.selectRow(2, inComponent: feature.rawValue, animated: false)
 
-        }
+      //  }
     }
     }
         
